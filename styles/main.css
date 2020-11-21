@@ -266,6 +266,12 @@ table {
     width: 100%;
     text-align: center;
   }
+  .info-us {
+    display: inline-block;
+  }
+  .info-us nav {
+    width: 80%;
+  }
 }
 
 @media (min-width: 480px) and (max-width: 1260px) {
@@ -327,6 +333,16 @@ table {
   .info-job .column a {
     padding: 10px 50px;
   }
+  .info-us {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .info-us nav {
+    width: 32%;
+  }
 }
 
 @media (min-width: 1260px) {
@@ -386,6 +402,16 @@ table {
   }
   .info-job .column a {
     padding: 10px 50px;
+  }
+  .info-us {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .info-us nav {
+    width: 32%;
   }
 }
 
@@ -560,17 +586,8 @@ FOOTER
           justify-content: flex-end;
 }
 
-.footer .info-us {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
 .footer .info-us nav {
-  width: 32%;
-  margin: 10px 30px;
+  margin: 30px;
 }
 
 .footer .info-us nav .name_logo {
@@ -579,7 +596,7 @@ FOOTER
 }
 
 .footer .info-us nav li {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .footer .info-us nav li:first-child {
