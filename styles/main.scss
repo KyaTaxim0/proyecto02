@@ -1,37 +1,11 @@
-@import 'reset.scss';
+@import 'reset';
+@import 'variables';
+@import 'bloque/logo';
+@import 'bloque/banner';
+@import 'bloque/search';
+@import 'bloque/detailArticle';
 
-$colors:(
-"darkBlue_1":#316099,
-"darkBlue_2":#1F3F68,
-"midBlue_1":#356EAD,
-"lightBlue_1":#98C3E8,
-"lowBlack_1": rgb(109, 107, 107)  
-);
 
-$h1:(
-    "bannerL":2.5rem Arial ,
-    "bannerS":2rem Arial,
-    "popularL": bold 2rem Arial,
-    "popularS": bold 1.5rem Arial,
-    "popular3L": bold 1.2rem Arial,
-    "articlesLL": bold 1rem Arial,
-);
-
-$h2:(
-    "sectionTL": bold 1rem Arial,
-    "sectionTS": bold 0.85rem Arial,
-    "footerL":1.8rem Arial
-);
-
-$h5:(
-    "detailL": bold 0.9rem Arial
-);
-
-$p:(
-    "bannerL":1.1rem Arial,
-    "detailL":0.9rem Arial,
-    "footerL":1rem Arial
-);
 /*
 GLOBALS
 */
@@ -46,7 +20,7 @@ a{
 
 .c-main{
     max-width:840px;
-    margin:0 auto;    
+    margin:0 5%;    
 }
 
 
@@ -63,44 +37,6 @@ a{
     max-height: 100px;
     padding: 20px 50px;
 
-    .logo{
-        position: relative;
-        height: 30px;
-        width: 40px;
-        display: flex;
-        align-items: center;
-    }
-    
-    .logo__left{
-        position: absolute;
-        background-color: map-get($colors,"darkBlue_1");
-        border: 2px solid map-get($colors,"darkBlue_1");
-        min-width: 20px;
-        height: 20px;
-        border-radius: 100%;
-        left:0px
-    }
-    
-    .logo__right{
-        position: absolute;
-        background-color: rgb(255, 255, 255);
-        border: 2px solid map-get($colors,"darkBlue_1");
-        width: 20px;
-        height: 20px;
-        border-radius: 100%;
-        right:0px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
-        p{
-            font-family: arial;
-            font-size: 14px;
-            color:map-get($colors,"darkBlue_1");
-            font-weight: bold;
-        }
-    }
-
     ul{
         display: flex;        
     }
@@ -115,30 +51,7 @@ a{
 }
 
 
-.principal-banner{
-    display: flex;
-    align-items: center;
-    /*background: url('./images/cover.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;*/
-    background-color: map-get($colors,"darkBlue_1");
-    min-height: 250px;
 
-    .banner-text{
-        color: white;
-        text-align: center;
-        margin: 0 20%;
-
-        h1{
-            margin-bottom: 20px;
-            font: map-get($h1 , "bannerL");
-        }
-        p{
-            font:map-get($p , "bannerL" );
-        }
-    }
-}
 
 /*SECTIONS*/
 
@@ -146,38 +59,6 @@ a{
     a{
         color:#356EAD;
     }
-}
-
-.s-search{
-    background-color: whitesmoke;
-    height:50px;
-    margin: 2.5% 0%;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.form-search {
-
-    padding: 10px;
-    display: flex;
-    width: 100%;
-
-        button{
-            border:none;
-            background-color: transparent;
-            font-size: 1rem;
-        }
-
-        input{
-            border:none;
-            font-size: 1rem;
-            background-color: transparent;
-            width:100%;
-            padding-right: 10px;
-            color: rgb(99, 99, 99);
-        }
-
 }
 
 .s-popular,
@@ -212,33 +93,6 @@ a{
             height: 100%;
         }
 
-        
-
-        .detail-container{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            
-            h5{
-                font:map-get($h5, "detailL");
-                color: map-get($colors , "darkBlue_2" );
-            }
-        
-            p{
-                font:map-get($p, "detailL");
-                color:map-get($colors , "lowBlack_1" );
-                margin: 0;
-            }
-
-            .detail-access{
-                display:flex;
-
-                a{
-                    padding: 0px 10px;
-                }
-            }
-
-        }
     }
 }
 
@@ -258,32 +112,6 @@ a{
 
         img{
             width: 100%;
-        }
-
-        .detail-container{
-            display: flex;
-            justify-content: space-between;
-
-            h5{
-                font:map-get($h5, "detailL");
-                color: map-get($colors , "darkBlue_2" );
-            }
-        
-            p{
-                font:map-get($p, "detailL");
-                color:map-get($colors , "lowBlack_1" );
-                margin: 0;
-            }
-
-            .detail-access{
-                display:flex;
-                align-items: center;
-
-                a{
-                    padding: 0px 10px;
-                }
-
-            }
         }
     }
 
@@ -317,30 +145,7 @@ a{
         margin-bottom: 10px;
     }
 
-    .detail-container{
-        display: flex;
-        justify-content: space-between;
-
-        h5{
-            font:map-get($h5, "detailL");
-            color: map-get($colors , "darkBlue_2" );
-        }
     
-        p{
-            font:map-get($p, "detailL");
-            color:map-get($colors , "lowBlack_1" );
-            margin: 0;
-        }
-
-        .detail-access{
-            display:flex;
-            align-items: center;
-
-            a{
-                padding: 0px 10px;
-            }
-        }
-    }
 }
 
 .desplazar{
@@ -391,7 +196,7 @@ FOOTER
 
         .column{
             width: 50%;
-            margin: 5% 0%;
+            margin: 10% 0%;
 
             
             a{
@@ -417,49 +222,11 @@ FOOTER
             width: 32%;
             margin: 10px 30px;
 
-            .container{
-                position: relative;
-                height: 30px;
-                width: 40px;
-                display: flex;
-                align-items: center;
-                margin-bottom: 10px;
-
-                .name_logo{
-                    margin-left: 50px;
-                    font-weight: bold;
-                }
+            .name_logo{
+                margin-left: 50px;
+                font-weight: bold;
             }
             
-            .left_c{
-                position: absolute;
-                background-color: map-get($colors,"lightBlue_1");
-                border: 2px solid map-get($colors,"darkBlue_1");
-                min-width: 20px;
-                height: 20px;
-                border-radius: 100%;
-                left:0px
-            }
-            
-            .right_c{
-                position: absolute;
-                background-color: rgb(255, 255, 255);
-                border: 2px solid map-get($colors,"darkBlue_1");
-                width: 20px;
-                height: 20px;
-                border-radius: 100%;
-                right:0px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            
-                p{
-                    font-family: arial;
-                    font-size: 14px;
-                    color:map-get($colors,"darkBlue_1");
-                    font-weight: bold;
-                }
-            }
 
             li{
                 margin-bottom: 10px;
