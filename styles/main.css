@@ -64,7 +64,8 @@ a {
 }
 
 .c-main {
-  margin: 0 10%;
+  max-width: 840px;
+  margin: 0 auto;
 }
 
 /*Creacion de Logo*/
@@ -83,7 +84,7 @@ a {
   padding: 20px 50px;
 }
 
-.header .container {
+.header .logo {
   position: relative;
   height: 30px;
   width: 40px;
@@ -95,7 +96,7 @@ a {
           align-items: center;
 }
 
-.header .left_c {
+.header .logo__left {
   position: absolute;
   background-color: #316099;
   border: 2px solid #316099;
@@ -105,7 +106,7 @@ a {
   left: 0px;
 }
 
-.header .right_c {
+.header .logo__right {
   position: absolute;
   background-color: white;
   border: 2px solid #316099;
@@ -124,7 +125,7 @@ a {
           align-items: center;
 }
 
-.header .right_c p {
+.header .logo__right p {
   font-family: arial;
   font-size: 14px;
   color: #316099;
@@ -153,10 +154,11 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url("/Semana_5/Sesion_5/images/coverv2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  /*background: url('./images/cover.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;*/
+  background-color: #316099;
   min-height: 250px;
 }
 
@@ -168,6 +170,11 @@ a {
 
 .principal-banner .banner-text h1 {
   margin-bottom: 20px;
+  font: 2.5rem Arial;
+}
+
+.principal-banner .banner-text p {
+  font: 1.1rem Arial;
 }
 
 /*SECTIONS*/
@@ -211,11 +218,28 @@ a {
   color: #636363;
 }
 
+.s-popular h2,
+.s-articles h2 {
+  font: bold 1rem Arial;
+  color: #356EAD;
+  margin-bottom: 10px;
+}
+
 .first-popular {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 20px;
+}
+
+.first-popular h1 {
+  font: bold 2rem Arial;
+  color: #1F3F68;
+  margin-bottom: 10px;
+}
+
+.first-popular p {
+  margin: 20px 0px;
 }
 
 .first-popular .colum-1 {
@@ -234,15 +258,26 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.first-popular .colum-1 .detail-container h5 {
+  font: bold 0.9rem Arial;
+  color: #1F3F68;
+}
+
+.first-popular .colum-1 .detail-container p {
+  font: 0.9rem Arial;
+  color: #6d6b6b;
+  margin: 0;
 }
 
 .first-popular .colum-1 .detail-container .detail-access {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .first-popular .colum-1 .detail-container .detail-access a {
@@ -257,6 +292,12 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 20px;
+}
+
+.top3-popular h1 {
+  font: bold 1.2rem Arial;
+  color: #1F3F68;
+  margin-bottom: 10px;
 }
 
 .top3-popular article {
@@ -274,6 +315,17 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.top3-popular article .detail-container h5 {
+  font: bold 0.9rem Arial;
+  color: #1F3F68;
+}
+
+.top3-popular article .detail-container p {
+  font: 0.9rem Arial;
+  color: #6d6b6b;
+  margin: 0;
 }
 
 .top3-popular article .detail-container .detail-access {
@@ -318,6 +370,12 @@ a {
   width: 100%;
 }
 
+.p_grid-articles h1 {
+  font: bold 1rem Arial;
+  color: #1F3F68;
+  margin-bottom: 10px;
+}
+
 .p_grid-articles .detail-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -325,6 +383,17 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.p_grid-articles .detail-container h5 {
+  font: bold 0.9rem Arial;
+  color: #1F3F68;
+}
+
+.p_grid-articles .detail-container p {
+  font: 0.9rem Arial;
+  color: #6d6b6b;
+  margin: 0;
 }
 
 .p_grid-articles .detail-container .detail-access {
@@ -379,6 +448,18 @@ FOOTER
   display: flex;
 }
 
+.footer .info-job h2 {
+  font: 1.8rem Arial;
+  margin-bottom: 20px;
+  max-width: 310px;
+}
+
+.footer .info-job p {
+  font: 1rem Arial;
+  margin: 0;
+  width: full-width;
+}
+
 .footer .info-job .column {
   width: 50%;
   margin: 5% 0%;
@@ -412,7 +493,7 @@ FOOTER
 
 .footer .info-us nav {
   width: 32%;
-  margin: 5% 0%;
+  margin: 10px 30px;
 }
 
 .footer .info-us nav .container {
@@ -430,6 +511,7 @@ FOOTER
 
 .footer .info-us nav .container .name_logo {
   margin-left: 50px;
+  font-weight: bold;
 }
 
 .footer .info-us nav .left_c {
@@ -472,7 +554,13 @@ FOOTER
   margin-bottom: 10px;
 }
 
+.footer .info-us nav li:first-child {
+  font-weight: bold;
+}
+
 .footer .rights {
   padding-bottom: 10%;
+  font: 1rem Arial;
+  color: #6d6b6b;
 }
 /*# sourceMappingURL=main.css.map */
